@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Pixelify+Sans:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #1A1A1A;
+  --bg-tertiary: #2A2A2A;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0A0;
+  --primary: #8B5CF6;
+  --secondary: #EC4899;
+  --accent: #06B6D4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: auto;
+  /* Lenis will handle smooth scrolling */
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll container */
+.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7C3AED;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(26, 26, 26, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(42, 42, 42, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Nothing-inspired Dotted Text */
+.dotted-text {
+  font-family: 'Pixelify Sans', 'Courier New', monospace;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Alternative: Orbitron for sleeker dot-matrix look */
+.dotted-text-alt {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Dotted text with shadow effect */
+.dotted-text-shadow {
+  font-family: 'Pixelify Sans', monospace;
+  letter-spacing: 0.15em;
+  text-shadow:
+    2px 0px 0px rgba(139, 92, 246, 0.3),
+    -2px 0px 0px rgba(236, 72, 153, 0.3),
+    0px 2px 0px rgba(6, 182, 212, 0.3);
+}
+
+/* Animated dotted text (optional) */
+@keyframes dotted-pulse {
+
+  0%,
+  100% {
+    letter-spacing: 0.15em;
+    opacity: 1;
+  }
+
+  50% {
+    letter-spacing: 0.18em;
+    opacity: 0.9;
+  }
+}
+
+.dotted-text-animated {
+  font-family: 'Pixelify Sans', monospace;
+  letter-spacing: 0.15em;
+  animation: dotted-pulse 2s ease-in-out infinite;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #8B5CF6, #EC4899, #06B6D4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Custom animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Section spacing */
+section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-primary to-secondary text-white font-semibold px-8 py-4 rounded-full;
+  @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/50;
+}
+
+.btn-secondary {
+  @apply glass text-white font-semibold px-8 py-4 rounded-full;
+  @apply transition-all duration-300 hover:bg-white/10 hover:scale-105;
+}
+
+/* Container */
+.container-custom {
+  @apply max-w-7xl mx-auto px-6 lg:px-8;
+}
+
+/* Responsive text */
+.heading-xl {
+  @apply text-6xl md:text-7xl lg:text-8xl font-bold font-display;
+}
+
+.heading-lg {
+  @apply text-5xl md:text-6xl lg:text-7xl font-bold font-display;
+}
+
+.heading-md {
+  @apply text-4xl md:text-5xl lg:text-6xl font-bold font-display;
+}
+
+.heading-sm {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold font-display;
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
