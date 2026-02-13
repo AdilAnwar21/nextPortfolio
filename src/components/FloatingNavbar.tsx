@@ -69,7 +69,7 @@ export default function FloatingNavbar() {
                 }}
                 className="fixed top-6 left-1/2 z-[100] transition-all duration-300 w-full px-4"
             >
-                <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-full px-6 md:px-8 py-4 md:py-4 flex items-center justify-between mx-auto shadow-2xl shadow-black/50 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:via-transparent before:to-transparent before:rounded-full before:pointer-events-none max-w-[calc(100%-2rem)] md:max-w-fit">
+                <div className="bg-white/10 backdrop-blur-xl border border-white/30 rounded-full px-6 md:px-12 py-4 md:py-4 flex items-center justify-between gap-4 md:gap-12 mx-auto shadow-2xl shadow-black/50 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-white/20 before:via-transparent before:to-transparent before:rounded-full before:pointer-events-none max-w-[calc(100%-2rem)] md:max-w-fit">
                     {/* Logo */}
                     <Link href="/" className="font-display font-bold text-xl md:text-xl text-white">
                         AA
@@ -123,11 +123,11 @@ export default function FloatingNavbar() {
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                    initial={{ opacity: 0, y: -10, x: "-50%" }}
+                    animate={{ opacity: 1, y: 0, x: "-50%" }}
+                    exit={{ opacity: 0, y: -10, x: "-50%" }}
                     transition={{ duration: 0.2 }}
-                    className="fixed top-28 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] bg-white rounded-3xl p-8 z-[90] md:hidden shadow-2xl"
+                    className="fixed top-28 left-1/2 w-[calc(100%-2rem)] bg-white rounded-3xl p-8 z-[90] md:hidden shadow-2xl"
                 >
                     <div className="flex flex-col gap-2">
                         {navLinks.map((link, index) => {

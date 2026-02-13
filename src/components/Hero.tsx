@@ -65,7 +65,7 @@ export default function Hero() {
         <section
             id="hero"
             ref={heroRef}
-            className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-0"
         >
             {/* Background gradient orbs */}
             <div className="absolute inset-0 overflow-hidden">
