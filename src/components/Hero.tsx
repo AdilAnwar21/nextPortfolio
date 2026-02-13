@@ -97,7 +97,7 @@ export default function Hero() {
 
                 <p
                     ref={subtitleRef}
-                    className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12"
+                    className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto mb-10"
                 >
                     Crafting visual stories that captivate and inspire. Specializing in
                     cinematic video editing, motion graphics, and creative design.
