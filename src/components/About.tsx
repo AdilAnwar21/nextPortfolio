@@ -85,7 +85,7 @@ export default function About() {
                         </h2>
 
                         <p className="text-gray-300 text-lg leading-relaxed">
-                            With over 5+ years of experience in video editing and design, I've
+                            With over 5+ years of experience in video editing and design, I&apos;ve
                             helped brands and creators bring their visions to life through
                             compelling visual storytelling.
                         </p>

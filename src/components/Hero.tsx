@@ -105,7 +105,7 @@ export default function Hero() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <button onClick={scrollToContact} className="btn-primary">
-                        Let's Work Together
+                        Let&apos;s Work Together
                     </button>
                     <a href="/videos" className="btn-secondary">
                         View My Work

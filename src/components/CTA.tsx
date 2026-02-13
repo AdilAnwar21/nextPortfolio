@@ -53,13 +53,13 @@ export default function CTA() {
                     </span>
 
                     <h2 className="heading-lg dotted-text">
-                        Let's Create Something{' '}
+                        Let&apos;s Create Something{' '}
                         <span className="gradient-text dotted-text-shadow">Amazing Together</span>
                     </h2>
 
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                        Have a project in mind? Whether it's a music video, commercial, or
-                        creative campaign, I'd love to hear about it and bring your vision to
+                        Have a project in mind? Whether it&apos;s a music video, commercial, or
+                        creative campaign, I&apos;d love to hear about it and bring your vision to
                         life.
                     </p>
 

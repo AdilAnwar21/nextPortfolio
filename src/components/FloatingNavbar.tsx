@@ -18,8 +18,8 @@ export default function FloatingNavbar() {
     const [activeSection, setActiveSection] = useState('hero');
     const { scrollY } = useScroll();
 
-    const navOpacity = useTransform(scrollY, [0, 100], [0, 1]);
-    const navY = useTransform(scrollY, [0, 100], [-100, 0]);
+    const navOpacity = useTransform(scrollY, [0, 100], [0.95, 1]);
+    const navY = useTransform(scrollY, [0, 100], [0, 0]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -57,7 +57,7 @@ export default function FloatingNavbar() {
     const navTransform = useTransform(
         scrollY,
         [0, 100],
-        ['translateX(-50%) translateY(-100px)', 'translateX(-50%) translateY(0px)']
+        ['translateX(-50%) translateY(0px)', 'translateX(-50%) translateY(0px)']
     );
 
     return (
