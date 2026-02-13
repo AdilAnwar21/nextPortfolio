@@ -31,7 +31,7 @@ export default function CTA() {
     }, []);
 
     const handleContact = () => {
-        window.location.href = 'mailto:adil@example.com';
+        window.location.href = 'mailto:John Doe';
     };
 
     return (
@@ -99,7 +99,7 @@ export default function CTA() {
                                 </svg>
                             </div>
                             <h3 className="font-semibold mb-2">Email</h3>
-                            <p className="text-gray-400 text-sm">adil@example.com</p>
+                            <p className="text-gray-400 text-sm">John Doe</p>
                         </div>
 
                         <div className="glass-light rounded-2xl p-6">
